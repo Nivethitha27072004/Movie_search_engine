@@ -1,0 +1,11 @@
+.favorites {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    /* center vertically */
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-text);
+    font-family: 'Poppins', sans-serif;
+}
