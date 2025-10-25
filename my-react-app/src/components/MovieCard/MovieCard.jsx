@@ -1,10 +1,21 @@
 import React from "react";
 import "./MovieCard.css";
+import { useMovieContext } from "../../context/MovieContext";
 
 function MovieCard({ movie }) {
-  function handlefavo() {
-    alert("booo ! ");
+  const { isfavt, removefavt, addFavt } = useMovieContext();
+  const favorite = isfavt(movie.id);
+
+   
+  function handlefavo(e) {
+    e.preventDefault();
+    if (favorite) removefavt(movie.id)
+    else addFavt(movie)
+
+
   }
+
+
   return (
     <div className="movie-card">
       <div className="movie-post">
@@ -15,7 +26,7 @@ function MovieCard({ movie }) {
       </div>
       <div className="movie-overlay">
         <button onClick={handlefavo} className="fav-btn">
-          🤍
+        {(favorite)?"❤️":"🤍"}
         </button>
       </div>
       <div className="movie-details">
