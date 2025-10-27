@@ -7,6 +7,7 @@ import loadingGif from "../../assets/loadingGif.gif";
 
 function Home() {
   const [serchQuery, setSerchQuary] = useState();
+   const [movies, setMovies] = useState([]);
 
   const handleSearch = async (e) => {
     e.preventDefault();
@@ -15,6 +16,8 @@ function Home() {
     setLoading(true);
 
     try {
+
+      //searching wanted movies
       const searchResults = await searchMovies(serchQuery);
       //if movie not availabe
       if (searchResults.length === 0) {
@@ -35,7 +38,8 @@ function Home() {
     }
   };
 
-  const [movies, setMovies] = useState([]);
+// getting all propul from api
+ 
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -55,6 +59,8 @@ function Home() {
     loadPopularMovies();
   }, []);
   console.log(movies);
+
+
 
   return (
     <>
@@ -85,6 +91,7 @@ function Home() {
             <img src={loadingGif} alt="loading..." />
           </div>
         ) : (
+            //maping data from api
           <div className="movie-grid">
             {movies.map((movie) => (
               <MovieCard movie={movie} key={movie.id} />

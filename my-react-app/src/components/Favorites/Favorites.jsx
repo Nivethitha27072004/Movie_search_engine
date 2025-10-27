@@ -8,7 +8,7 @@ function Favorites() {
 
   if (favt) {
     return (
-      <div>
+      <div className='fav'>
         <h3>your Favorites</h3>
         <div className="movie-grid">
           {favt.map((movie) => (
@@ -17,13 +17,16 @@ function Favorites() {
         </div>
       </div>
     );
-  } else {
+  }
+
+  else {
     return (
-      <div>
+      <div className='fav'>
         <h3>Noooo Favorites yet....</h3>
       </div>
     );
   }
+
  
 }
 

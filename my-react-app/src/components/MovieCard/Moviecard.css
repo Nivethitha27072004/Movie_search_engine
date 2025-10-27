@@ -1,7 +1,10 @@
+.details{
+    
+}
+
 .movie-card {
     background-color: var(--secondary-bg);
     border-radius: 10px;
-    /* removed the blue border */
     overflow: hidden;
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
@@ -29,10 +32,13 @@
     font-size: 1.2rem;
 }
 
-.movie-details h5 {
+
+
+.movie-details {
     margin: 0;
     color: var(--secondary-text);
     font-size: 0.9rem;
+    background-color: var(--secondary-bg);
 }
 
 .fav-btn {
@@ -40,9 +46,10 @@
     padding: 6px 12px;
     font-size: 0.9rem;
     border-radius: 5px;
-    background-color:var(--accent-color);
+    background-color:var();
     color: var(--button-text);
     border: none;
+    gap:3px;
     cursor: pointer;
     font-weight: 800;
     transition: background-color 0.2s;

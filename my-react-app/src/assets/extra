@@ -1,1 +1,16 @@
 ❤️🤍
+ <div className="movie-details">
+      <div className="img">
+        <img
+          src={`https://image.tmdb.org/t/p/w500${movie.poster_path}  `}
+          alt={movie.title}
+        />
+      </div>
+      <div className="details">
+        <h3>Movie Title:{movie.title}</h3>
+        <h1>Realsed date:{movie.release_date}</h1>
+        <p>Overview:{movie.overview}</p>
+        <p>Original language: {movie.original_language}</p>
+        <p>voting:{movie.vote_average}</p>
+      </div>
+    </div>

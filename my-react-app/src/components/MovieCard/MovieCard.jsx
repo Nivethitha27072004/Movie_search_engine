@@ -1,18 +1,18 @@
 import React from "react";
 import "./MovieCard.css";
 import { useMovieContext } from "../../context/MovieContext";
+import { Link } from "react-router-dom";
+import MovieDetails from "../MovieDetails/MovieDetails";
 
 function MovieCard({ movie }) {
+
+  //favorite button
   const { isfavt, removefavt, addFavt } = useMovieContext();
   const favorite = isfavt(movie.id);
-
-   
   function handlefavo(e) {
     e.preventDefault();
     if (favorite) removefavt(movie.id)
     else addFavt(movie)
-
-
   }
 
 
@@ -24,14 +24,19 @@ function MovieCard({ movie }) {
           alt={movie.title}
         />
       </div>
-      <div className="movie-overlay">
-        <button onClick={handlefavo} className="fav-btn">
-        {(favorite)?"❤️":"🤍"}
-        </button>
-      </div>
-      <div className="movie-details">
-        <h3>{movie.title}</h3>
-        <h5>{movie.release_date}</h5>
+      <div className="details">
+        <div className="movie-overlay">
+          <button onClick={handlefavo} className="fav-btn">
+            {favorite ? "❤️" : "🤍"}
+          </button>
+          <button className="fav-btn">
+            <Link to={`/movie/${movie.id}`}> more</Link>
+          </button>
+        </div>
+        <div className="movie-details">
+          <h3>{movie.title}</h3>
+          <h5>{movie.release_date}</h5>
+        </div>
       </div>
     </div>
   );

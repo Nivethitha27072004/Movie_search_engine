@@ -1,35 +1,29 @@
-/* ------------------- Theme Variables ------------------- */
 :root {
-    /* Light Theme Colors */
+
     --bg-color: #f5f5f5;
-    /* main background */
     --nav-bg: #8458B3;
-    /* navbar background */
     --secondary-bg: #ffffff;
-    /* card background */
     --accent-color: #a0d2eb;
-    /* highlights */
     --primary-text: #2e2e2e;
-    /* main text */
     --secondary-text: #555555;
-    /* subtitle text */
     --button-bg: #8458B3;
     --button-text: #ffffff;
+    --text-color: rgb(11, 11, 11);
+    
 }
 
-/* Dark Theme Variables */
 [data-theme="dark"] {
     --bg-color: #040D12;
     --nav-bg: #183D3D;
-    --secondary-bg: #5C8374;
+    --secondary-bg: #3a4d46;
     --accent-color: #93B1A6;
     --primary-text: #ffffff;
     --secondary-text: #cccccc;
-    --button-bg: #183D3D;
-    --button-text: #93B1A6;
+    --button-bg: #1f4c4c;
+    --button-text: #bdd0c9;
+    --text-color:rgb(172, 166, 166);
 }
 
-/* ------------------- Global Styling ------------------- */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -52,7 +46,7 @@ button {
     font-weight: 600;
 }
 
-/* Container Utility */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
