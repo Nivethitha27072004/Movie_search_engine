@@ -6,7 +6,7 @@ import MovieCard  from "../MovieCard/MovieCard";
 function Favorites() {
   const { favt } = useMovieContext();
 
-  if (favt) {
+  if (favt.length!==0) {
     return (
       <div className='fav'>
         <h3>your Favorites</h3>
@@ -18,7 +18,6 @@ function Favorites() {
       </div>
     );
   }
-
   else {
     return (
       <div className='fav'>

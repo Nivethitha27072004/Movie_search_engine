@@ -1,60 +1,71 @@
-.details{
+.movie-post img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.movie-overlay h3{
+    background-color: var(--secondary-bg);
+    padding: 10px;
+    color: var(--primary-text);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: var(--primary-text);
+    font-size:16px;
+    line-height: 1.4;
     
 }
 
+.fav-btn {
+    margin-top:2px;
+    margin-left: 8px;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    color: var(--button-text);
+    border: none;
+    gap: 3px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
 .movie-card {
+    width: 220px;
+    height: 400px;
     background-color: var(--secondary-bg);
+    border: 2px solid var(--accent-color);
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .movie-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.movie-post img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.movie-details {
-    padding: 0.75rem 1rem;
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .movie-details h3 {
-    margin: 0.5rem 0 0.25rem;
-    color: var(--primary-text);
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #222;
 }
 
 
 
-.movie-details {
-    margin: 0;
-    color: var(--secondary-text);
-    font-size: 0.9rem;
-    background-color: var(--secondary-bg);
-}
 
-.fav-btn {
-    margin-top: 0.5rem;
-    padding: 6px 12px;
-    font-size: 0.9rem;
-    border-radius: 5px;
-    background-color:var();
-    color: var(--button-text);
-    border: none;
-    gap:3px;
-    cursor: pointer;
-    font-weight: 800;
-    transition: background-color 0.2s;
-}
-
-.fav-btn:hover {
-    background-color: var(--button-bg);
-}

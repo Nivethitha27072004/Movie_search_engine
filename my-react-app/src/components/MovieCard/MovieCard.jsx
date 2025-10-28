@@ -32,10 +32,7 @@ function MovieCard({ movie }) {
           <button className="fav-btn">
             <Link to={`/movie/${movie.id}`}> more</Link>
           </button>
-        </div>
-        <div className="movie-details">
           <h3>{movie.title}</h3>
-          <h5>{movie.release_date}</h5>
         </div>
       </div>
     </div>
