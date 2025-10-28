@@ -15,7 +15,7 @@ Users can search for specific movies, view details, add favorites, and switch be
 
 
 
-## 🧠 What I Learned
+##  What I Learned
 
 * How to use **React Hooks** (`useState`, `useEffect`, and `useContext`)
 * Working with **APIs** (TMDB) to fetch dynamic data
@@ -25,7 +25,7 @@ Users can search for specific movies, view details, add favorites, and switch be
 
 
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 * **React.js**
 * **TMDB API**
@@ -34,7 +34,7 @@ Users can search for specific movies, view details, add favorites, and switch be
 
 
 
-## 📦 Setup Instructions
+##  Setup Instructions
 
 1. Clone the repository
 
