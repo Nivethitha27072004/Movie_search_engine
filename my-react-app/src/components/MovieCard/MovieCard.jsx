@@ -5,16 +5,14 @@ import { Link } from "react-router-dom";
 import MovieDetails from "../MovieDetails/MovieDetails";
 
 function MovieCard({ movie }) {
-
   //favorite button
   const { isfavt, removefavt, addFavt } = useMovieContext();
   const favorite = isfavt(movie.id);
   function handlefavo(e) {
     e.preventDefault();
-    if (favorite) removefavt(movie.id)
-    else addFavt(movie)
+    if (favorite) removefavt(movie.id);
+    else addFavt(movie);
   }
-
 
   return (
     <div className="movie-card">
